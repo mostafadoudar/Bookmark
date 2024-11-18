@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" , initial-scale="1.0" />
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <h1 class="text-center py-2 position-relative">Bookmarker</h1>
+        <div class="book-mark">
+          <div
+            class="bookmark d-flex flex-column justify-content-center align-items-center w-100 py-4 p-3 gap-4"
+          ></div>
+        </div>
+        <div class="your-fav text-center py-4">
+          <h2 class="d-inline-block">
+            <i class="fa-solid fa-bookmark fa-xl"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark fa-xl"></i>
+          </h2>
+        </div>
+        <div class="float">
+          <label class="py-2">
+            <i class="fa-solid fa-book-bookmark me-1"></i>
+            <span>Site Name</span>
+          </label>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="siteName"
+              placeholder=""
+              oninput="validationName()"
+            />
+            <label for="floatingInput">Bookmark Name</label>
+          </div>
+
+          <label class="py-2">
+            <i class="fa-solid fa-link me-1"></i>
+            <span>Site Name</span>
+          </label>
+          <div class="form-floating mb-3">
+            <input
+              type="url"
+              class="form-control"
+              id="siteUrl"
+              placeholder=""
+              oninput=" validationEmail()"
+            />
+            <label for="floatingInput">Website Url</label>
+          </div>
+        </div>
+        <div class="btn text-center w-100">
+          <button
+            type="button"
+            class="btn btn-primary btn-lg text-center w-25"
+            id="shadow"
+            onclick="addSiteName()"
+          >
+            Submit
+          </button>
+        </div>
+        <div class="mark pt-3">
+          <div
+            class="line d-flex flex-column justify-content-center align-items-center w-100"
+          ></div>
+        </div>
+
+
+        <div class=" bg-light ">
+          <table class="tabel mt-4 w-100">
+         <thead>
+          <tr>
+            <th class="p-2  text-center ">Index</th>
+            <th class="p-2 text-center">Website Name</th>
+            <th class="p-2 text-center">Visite</th>
+            <th class="p-2  text-center">Delete</th>
+          </tr>
+         </thead>
+         <tbody id="data" >
+          
+         </tbody> 
+        
+      </table>
+    </div>
+
+
+
+    <div id="customAlert" class="alert-box">
+      <div class="alert-header">
+          <div class="alert-circle red"></div>
+          <div class="alert-circle yellow"></div>
+          <div class="alert-circle green"></div>
+      </div>
+      <div class="alert-content">
+          <p><strong>Site Name or URL is not valid:</strong></p>
+          <ul>
+              <li>Site name must contain at least 3 characters</li>
+              <li>Site URL must be a valid one</li>
+          </ul>
+          <button id="closeAlert">Close</button>
+      </div>
+  </div>
+
+
+      </div>
+
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
